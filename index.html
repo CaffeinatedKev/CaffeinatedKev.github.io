@@ -5,32 +5,68 @@ title: Surfing on bugs
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Kevin Larsen | Fullstack Developer</title>
+    <script>
+      function scrollToSection(event) {
+        event.preventDefault();
+        const sectionId = event.target.getAttribute('href');
+        document.querySelector(sectionId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
 
-<body>
-<h2>Aeropress - Iced Coffee Recipe</h2>
-<h3>275ml~</h3>
-<p>
-    <ul>
-        <li>1:10 coffee to liquid ratio</li>
-        <li>17g Coffee</li>
-        <li>170g Water</li>
-        <li>60g Ice</li>
-    </ul>
-    Brew the coffee directly over ice and top up with milk, to taste. 
-    <br>
-
-<h3>500ml~</h3>
-<ul>
-    <li>1:8 coffee to liquid ratio</li>
-    <li>30g Coffee</li>
-    <li>240g Water</li>
-    <li>80g Ice</li>
-</ul>
-Brew the coffee directly over ice and top up with milk, to taste. 
-</p>
-
-<hr>
-
-<p>I'm hosted with caffeine and love.</p>
-</body>
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', scrollToSection);
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Kevin Larsen</h1>
+      <h2>Fullstack Developer</h2>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about">
+        <h3>About Me</h3>
+        <p>I am a fullstack developer with experience in both front-end and back-end technologies. I am experienced with HTML, CSS, JavaScript, React, Node.js and MongoDB. I am also familiar with Git and GitHub for version control. I am always eager to learn new technologies and improve my skills.</p>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>Git</li>
+          <li>GitHub</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h3>Projects</h3>
+        <ul>
+          <li>Project 1: <a href="#">Link</a></li>
+          <li>Project 2: <a href="#">Link</a></li>
+          <li>Project 3: <a href="#">Link</a></li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h3>Contact</h3>
+        <p>You can contact me at <a href="mailto:kevin.larsen@email.com">kevin.larsen@email.com</a>.</p>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © Kevin Larsen</p>
+    </footer>
+  </body>
 </html>
